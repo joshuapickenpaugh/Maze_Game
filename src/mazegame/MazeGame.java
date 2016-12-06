@@ -13,14 +13,21 @@ public class MazeGame {
         //Variables:
         int intUserChoice;
         int quit = 1;
+        String player;
         
         //Size of the maze:
         final int ROWS = 10;
         final int COLS = 10;
-        int[][] maze = new int [ROWS][COLS];                
+        int[][] maze = new int [ROWS][COLS];         
+        
+        Inventory invtry = new Inventory();
                 
         //create a Scanner object to read from the keyboard
-	Scanner keyboard = new Scanner(System.in);        
+	Scanner keyboard = new Scanner(System.in);      
+        
+        //Gets name of player:
+        System.out.println("Enter your name: ");
+        player = keyboard.nextLine();
         
         do
         {
@@ -36,7 +43,7 @@ public class MazeGame {
             switch(intUserChoice)
             {
                 case 1:
-                    Inventory.ViewInventory();
+                    invtry.ViewInventory();
                     break;
                 case 9:
                     quit = 0;
@@ -47,7 +54,7 @@ public class MazeGame {
             
         }while(quit == 1);
         
-        System.out.println("Goodbye, player.");
+        System.out.println("Goodbye, " + player + ".");
     }
     
 }
