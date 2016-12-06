@@ -6,7 +6,8 @@ December 4th, 2016
 package mazegame;
 import java.util.Scanner;
 
-public class MazeGame {
+public class MazeGame 
+{
 
     public static void main(String[] args) {
         
